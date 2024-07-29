@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exploration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Explore the Planets</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#planets">Planets</a></li>
+                <li><a href="#search">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="planets"></section>
+        <section id="search">
+            <input type="text" id="searchInput" placeholder="Search for a planet...">
+            <button id="searchButton">Search</button>
+            <div id="searchResults"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Space Exploration &copy; 2024</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="planetModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

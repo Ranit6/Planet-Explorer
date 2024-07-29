@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fallback background color */
+    color: #fff;
+    text-align: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2016a-f-2000x1500_0.png') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+header {
+    background: #1a1a1a;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 100px 20px 20px;
+}
+
+#planets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.planet {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.planet:hover {
+    transform: scale(1.05);
+}
+
+.planet img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.planet h2 {
+    margin: 10px 0;
+}
+
+.planet p {
+    margin: 0;
+}
+
+footer {
+    background: #1a1a1a;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .planet {
+        width: 100%;
+    }
+}
+
+#search {
+    margin-top: 40px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 1em;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#searchResults {
+    margin-top: 20px;
+}
+
+.search-result {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+
+.search-result:hover {
+    transform: scale(1.05);
+}
+
+.search-result img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.search-result h2 {
+    margin: 10px 0;
+}
+
+.search-result p {
+    margin: 0;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1001; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 700px;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
